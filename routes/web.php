@@ -20,9 +20,6 @@ Route::get('/', function () {
 });
 
 
-// Route::post('/guardar-datos', [FormularioController::class, 'guardar'])->name('guardar.datos');
-
-
 Route::get('/finEncuesta', [FinEncuestaController::class, 'fin']);
 
-Route::post('/guardar-registro', [FormularioController::class, 'store'])->name('guardar.registro');
+Route::post('/guardar-registro', [FormularioController::class, 'encuesta'])->name('guardar.registro');

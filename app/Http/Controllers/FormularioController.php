@@ -7,9 +7,8 @@ use App\Models\Registro;
 
 class FormularioController extends Controller
 {
-    public function store(Request $request)
+    public function encuesta(Request $request)
     {
-        // Validación de datos
         $request->validate([
             'tipo_documento' => 'required|string',
             'numero_documento' => 'required|string',
@@ -23,7 +22,6 @@ class FormularioController extends Controller
             'servicio_atendido' => 'required|string',
         ]);
 
-        // Crear un nuevo registro
         $registro = new Registro([
             'tipo_documento' => $request->get('tipo_documento'),
             'numero_documento' => $request->get('numero_documento'),
