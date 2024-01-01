@@ -1,0 +1,135 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+form {
+    width: 750px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 1px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+
+  }
+
+h1{
+    text-align: center;
+}
+
+img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;    
+}
+/* REQUERIDO */
+span{
+    color: red;
+    font-size: 20px;
+}
+
+
+/* TITULOS */
+
+.title{
+    color: rgb(102, 172, 177);
+}
+
+.title2{
+    color: rgb(102, 172, 177);
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.parraf1 {
+    width: 600px;
+    text-align: center;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: rgb(73, 73, 73);
+    line-height: 1.9; 
+
+}
+
+/* SUB TITULOS */
+.TD,
+.ND,
+.NYA,
+.TL,
+.MA{
+    color: blue;
+    font-size: 18px;
+}
+
+
+
+/* CAJAS */
+
+.caja1{
+    border-radius: 5px;
+    font-size: 15px;
+    height: 40px;
+
+}
+option{
+    font-size: 18px;
+    color: grey;
+
+}
+
+/* .caja2 {
+    text-align: right; 
+    margin-left: auto; 
+    margin-right: auto 10px;
+
+} */
+
+.caja4{
+    border-radius: 5px;
+    font-size: 15px;
+    height: 40px;
+    width: 305px;
+}
+.caja5{
+    border-radius: 5px;
+    font-size: 15px;
+    height: 40px;
+    width: 305px;
+}
+.caja6{
+    border-radius: 5px;
+    font-size: 15px;
+    height: 40px;
+    width: 305px;
+}
+
+.inp {
+    margin-left: auto; 
+    margin-right: auto;
+    height: 35px;
+}
+
+
+.servicio-container {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+label {
+    margin-left: 5px;
+}
