@@ -9,7 +9,7 @@ class AtencionIndividualController extends Controller
 {
     public function atencion(Request $request)
     {
-        dd(re);
+        dd($request);
         $validatedData = $request->validate([
             'trato_personal' => 'required|string|max:255',
             'tiempo_espera' => 'required|string|max:255',

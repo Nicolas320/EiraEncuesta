@@ -26,10 +26,9 @@ Route::get('/', function () {
 Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
 
 
-Route::post('/registroC', [FormularioController::class, 'datos'])->name('guardar.registro');
 
-Route::post('/registroC', [AtencionIndividualController::class, 'atencion'])->name('guardar.registro');
 
+Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
 
 
