@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Registro extends Model
 {
-    protected $table = 'registros'; 
+    protected $table = 'datos_personales'; 
 
     protected $fillable = [
         'tipo_documento',

@@ -20,7 +20,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('/finEncuesta', [FinEncuestaController::class, 'fin']);
+//DATOS PERSONALES
+
+Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
 
 
 Route::post('/registroC', [FormularioController::class, 'datos'])->name('guardar.registro');
+
+
+//ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES
+
+
+
+

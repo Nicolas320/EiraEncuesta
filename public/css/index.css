@@ -53,6 +53,15 @@ span{
 
 }
 
+.parraf2{
+    width: 700px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: mediumblue;
+}
+
 /* SUB TITULOS */
 .TD,
 .ND,
@@ -133,3 +142,23 @@ input[type="radio"] {
 label {
     margin-left: 5px;
 }
+
+
+/* TABLA */
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+  }
+
+  /* Colores según la evaluación */
+  .muy-buena { background-color: #D4EDDA; }
+  .buena { background-color: #CCE5FF; }
+  .regular { background-color: #FFF3CD; }
+  .mala { background-color: #F8D7DA; }
+  .muy-mala { background-color: #F5C6CB; }

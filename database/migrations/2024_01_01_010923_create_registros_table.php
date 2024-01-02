@@ -11,7 +11,7 @@ class CreateRegistrosTable extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_documento');
-            $table->string('numero_documento');
+            $table->string('el tiempo de espera para ser atendido');
             $table->string('nombres_apellidos');
             $table->string('telefono');
             $table->date('fecha_atencion');
@@ -27,6 +27,6 @@ class CreateRegistrosTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('registros');
+        Schema::dropIfExists('datos_personales');
     }
 }

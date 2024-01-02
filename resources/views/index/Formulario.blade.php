@@ -116,7 +116,7 @@
     <span>*</span>
     <br>
     <br>
-    <select class="caja5" name="tipo_discapacidad" id="tipo_discapacidad" required>
+    <select class="caja5" name="tipo_discapacidad" id="tipo_discapacidad">
         <option value="">Selecciona</option>
         <option value="Auditiva">Auditiva</option>
         <option value="Fisica">Física</option>
@@ -148,9 +148,101 @@
         </div>
 
 
+        <h1 class="title2">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
+
+        <div class="parraf2"> Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción</div>
+        <table>
+        <tr>
+            <th></th>
+            <th>MUY BUENA</th>
+            <th>BUENA</th>
+            <th>REGULAR</th>
+            <th>MALA</th>
+            <th>MUY MALA</th>
+        </tr>
+        <tr>
+            <td>El trato recibido por el personal encargado</td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MUY BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="REGULAR">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MALA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MUY MALA">
+                </td>
+        </tr>
 
 
-    
+        <tr>
+        <td>el tiempo de espera para ser atendido</td>
+        <td>
+            <input type="radio" name="atencion_individual" value="MUY BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="REGULAR">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MALA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MUY MALA">
+                </td>
+            </tr>
+
+            <tr>
+        <td>La información , el trato y condiciones de privacidad para su atención</td>
+        <td>
+            <input type="radio" name="atencion_individual" value="MUY BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="REGULAR">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MALA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MUY MALA">
+                </td>
+            </tr>
+
+            <tr>
+        <td>La experiencia en general respecto a los servicios de salud que ha recibido a través de la IPS</td>
+        <td>
+            <input type="radio" name="atencion_individual" value="MUY BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="BUENA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="REGULAR">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MALA">
+                </td>
+                <td>
+                <input type="radio" name="atencion_individual" value="MUY MALA">
+                </td>
+            </tr>
+        </table>
+
+
+
+
+
+
         <div>
             <button type="submit">Guardar</button>
         </div>

@@ -26,6 +26,6 @@ class FormularioController extends Controller
         
         $encuesta->save();
 
-        return redirect()->route('guardar.registro')->with('success', 'Encuesta llenada!!');
+        return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
     }
 }
