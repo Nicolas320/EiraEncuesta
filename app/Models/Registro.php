@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Registro extends Model
 {
-    protected $table = 'registros'; 
+    protected $table = 'registros';
+
 
     protected $fillable = [
         'tipo_documento',
@@ -20,5 +21,5 @@ class Registro extends Model
         'tiene_alguna_discapacidad',
         'tipo_discapacidad',
         'servicio_atendido'
-      
+       
     ];}

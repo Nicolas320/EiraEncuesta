@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AtencionIndividualController;
 use App\Http\Controllers\FinEncuestaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormularioController;
@@ -26,6 +27,9 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 
 Route::post('/registroC', [FormularioController::class, 'datos'])->name('guardar.registro');
+
+Route::post('/registroC', [AtencionIndividualController::class, 'atencion'])->name('guardar.registro');
+
 
 
 

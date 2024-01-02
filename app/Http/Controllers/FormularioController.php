@@ -10,7 +10,9 @@ class FormularioController extends Controller
 {
     public function datos(Request $request)
     {
-        // dd($request);
+        dd($request);
+
+            /* DATOS PERSONALES */
         $validatedData = $request->validate([
             'tipo_documento' => 'required|string',
             'numero_documento' => 'required|numeric',
@@ -22,14 +24,6 @@ class FormularioController extends Controller
             'tiene_alguna_discapacidad' => 'required|string',
             'tipo_discapacidad' => 'nullable|string',
             'servicio_atendido' => 'required|string',
-
-            // /*ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES */ 
-            // 'trato_personal' => 'required|string|max:255',
-            // 'tiempo_espera' => 'required|string|max:255',
-            // 'privacidad_info' => 'required|string|max:255',
-            // 'experiencia_salud' => 'required|string|max:255',
-            // 'recomendacion' => 'required|string|max:255',
-            // 'comentarios' => 'nullable|string|max:255',
         ]);
      
 
@@ -39,16 +33,5 @@ class FormularioController extends Controller
 
         return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
     }
-
-
-
-    /* ATENCION INDIVIDUAL */
-
-    
-  
-
-           
-    
-
-    
+ 
 }
