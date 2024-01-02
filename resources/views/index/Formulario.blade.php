@@ -104,11 +104,11 @@
     </div>
 
     <div>
-    <label class="MA">Tiene alguna discapacidad</label>
+    <label class="MA" required >Tiene alguna discapacidad</label>
     <br>
     <br>
-    <input type="radio" name="tiene_alguna_discapacidad" value="si" required> Si
-    <input type="radio" name="tiene_alguna_discapacidad" value="no" required> No
+    <input type="radio" name="tiene_alguna_discapacidad" value="si"> Si
+    <input type="radio" name="tiene_alguna_discapacidad" value="no"> No
 </div>
 
 <div id="tipoDiscapacidadField" style="display: none;">
@@ -149,95 +149,63 @@
 
 
         <h1 class="title2">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
+        <div class="parraf2">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción</div>
 
-        <div class="parraf2"> Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción</div>
-        <table>
-        <tr>
-            <th></th>
-            <th>MUY BUENA</th>
-            <th>BUENA</th>
-            <th>REGULAR</th>
-            <th>MALA</th>
-            <th>MUY MALA</th>
-        </tr>
-        <tr>
-            <td>El trato recibido por el personal encargado</td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MUY BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="REGULAR">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MALA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MUY MALA">
-                </td>
-        </tr>
+<table>
+    <tr>
+        <th></th>
+        <th>MUY BUENA</th>
+        <th>BUENA</th>
+        <th>REGULAR</th>
+        <th>MALA</th>
+        <th>MUY MALA</th>
+    </tr>
+    <tr>
+        <td>El trato recibido por el personal encargado</td>
+        <td><input type="radio" name="trato_personal" value="MUY BUENA"></td>
+        <td><input type="radio" name="trato_personal" value="BUENA"></td>
+        <td><input type="radio" name="trato_personal" value="REGULAR"></td>
+        <td><input type="radio" name="trato_personal" value="MALA"></td>
+        <td><input type="radio" name="trato_personal" value="MUY MALA"></td>
+    </tr>
+    <tr>
+        <td>Tiempo de espera para ser atendido</td>
+        <td><input type="radio" name="tiempo_espera" value="MUY BUENA"></td>
+        <td><input type="radio" name="tiempo_espera" value="BUENA"></td>
+        <td><input type="radio" name="tiempo_espera" value="REGULAR"></td>
+        <td><input type="radio" name="tiempo_espera" value="MALA"></td>
+        <td><input type="radio" name="tiempo_espera" value="MUY MALA"></td>
+    </tr>
+    <tr>
+        <td>La información, el trato y condiciones de privacidad</td>
+        <td><input type="radio" name="privacidad_info" value="MUY BUENA"></td>
+        <td><input type="radio" name="privacidad_info" value="BUENA"></td>
+        <td><input type="radio" name="privacidad_info" value="REGULAR"></td>
+        <td><input type="radio" name="privacidad_info" value="MALA"></td>
+        <td><input type="radio" name="privacidad_info" value="MUY MALA"></td>
+    </tr>
+    <tr>
+        <td>Experiencia en general respecto a los servicios de salud</td>
+        <td><input type="radio" name="experiencia_salud" value="MUY BUENA"></td>
+        <td><input type="radio" name="experiencia_salud" value="BUENA"></td>
+        <td><input type="radio" name="experiencia_salud" value="REGULAR"></td>
+        <td><input type="radio" name="experiencia_salud" value="MALA"></td>
+        <td><input type="radio" name="experiencia_salud" value="MUY MALA"></td>
+    </tr>
+</table>
 
+        <div class="parraf2">¿Recomendaría a sus familiares y amigos esta IPS?</div>
+        <span>*</span>
 
-        <tr>
-        <td>el tiempo de espera para ser atendido</td>
-        <td>
-            <input type="radio" name="atencion_individual" value="MUY BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="REGULAR">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MALA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MUY MALA">
-                </td>
-            </tr>
+        <input type="radio" name="recomendacion" value="Definitiavamente SI" >Definitiavamente SI
+        <input type="radio" name="recomendacion" value="Definitiavamente NO" >Definitiavamente NO
+        <input type="radio" name="recomendacion" value="Probablemente SI" >Probablemente SI
+        <input type="radio" name="recomendacion" value="Probablemente NO">Probablemente NO
 
-            <tr>
-        <td>La información , el trato y condiciones de privacidad para su atención</td>
-        <td>
-            <input type="radio" name="atencion_individual" value="MUY BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="REGULAR">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MALA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MUY MALA">
-                </td>
-            </tr>
-
-            <tr>
-        <td>La experiencia en general respecto a los servicios de salud que ha recibido a través de la IPS</td>
-        <td>
-            <input type="radio" name="atencion_individual" value="MUY BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="BUENA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="REGULAR">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MALA">
-                </td>
-                <td>
-                <input type="radio" name="atencion_individual" value="MUY MALA">
-                </td>
-            </tr>
-        </table>
-
+        <br>
+    <label>Escribe aquí tus comentarios ,felicitaciones, quejas o inquietudes.</label>
+    <br>
+    <input name="comentarios" type="text">
 
 
 
@@ -249,7 +217,6 @@
 
 
     <script src="js/index.js"></script>
-
 
 </form>
 

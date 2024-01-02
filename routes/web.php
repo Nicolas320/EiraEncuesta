@@ -28,7 +28,7 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 Route::post('/registroC', [FormularioController::class, 'datos'])->name('guardar.registro');
 
 
-//ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES
+
 
 
 

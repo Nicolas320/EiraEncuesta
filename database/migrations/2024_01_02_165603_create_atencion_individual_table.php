@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('tiempo_espera', 255)->nullable(false);
             $table->string('privacidad_info', 255)->nullable(false);
             $table->string('experiencia_salud', 255)->nullable(false);
+            $table->string('recomendacion', 255)->nullable(false);
+            $table->string('comentarios', 255)->nullable(false);
             $table->timestamp('created_at')->nullable();
             $table->timestamp('updated_at')->nullable();
         });
