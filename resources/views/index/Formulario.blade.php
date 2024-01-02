@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+    <link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
+
 
     <title>ENCUESTA DE SATISFACCION EIRA SALUD IPS</title>
 </head>
@@ -195,38 +197,45 @@
 </table>
 
         <div class="parraf2">¿Recomendaría a sus familiares y amigos esta IPS?</div>
-        <span>*</span>
 
-        <input type="radio" name="recomendacion" value="Definitiavamente SI" >Definitiavamente SI
-        <input type="radio" name="recomendacion" value="Definitiavamente NO" >Definitiavamente NO
-        <input type="radio" name="recomendacion" value="Probablemente SI" >Probablemente SI
-        <input type="radio" name="recomendacion" value="Probablemente NO">Probablemente NO
+        <!-- <span>*</span> -->
 
+        <input class="seleccion" type="radio" name="recomendacion" value="Definitiavamente SI" >Definitiavamente SI
         <br>
-    <label>Escribe aquí tus comentarios ,felicitaciones, quejas o inquietudes.</label>
+        <input class="seleccion" type="radio" name="recomendacion" value="Definitiavamente NO" >Definitiavamente NO
+        <br>
+        <input class="seleccion" type="radio" name="recomendacion" value="Probablemente SI" >Probablemente SI
+        <br>
+        <input class="seleccion" type="radio" name="recomendacion" value="Probablemente NO">Probablemente NO
+        <br>
+        <br>
+
+    <label class="parraf2">Escribe aquí tus comentarios ,felicitaciones, quejas o inquietudes.</label>
     <br>
-    <input name="comentarios" type="text">
+    <br>
+    <textarea class="comentarios" name="comentarios" type="text"></textarea>
+    <br>
 
+    <label class="parraf2" for="">Firma</label>
+    <span>*</span>
 
+    <canvas id="canvas" width="500" height="200"></canvas>
 
+    <!-- <button onclick="guardarFirma()">Guardar Firma</button> -->
 
+<span onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline;">Limpiar Firma</span>
 
         <div>
-            <button type="submit">Guardar</button>
+            <button class="enviar" type="submit">Enviar</button>
         </div>
 
-        @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
+      
 
     <script src="js/index.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+
+    <script src="js/firma.js"></script>
 
 </form>
 

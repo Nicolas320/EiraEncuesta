@@ -162,3 +162,38 @@ table {
   .regular { background-color: #FFF3CD; }
   .mala { background-color: #F8D7DA; }
   .muy-mala { background-color: #F5C6CB; }
+
+  /* COMENTARIOS */
+
+  .comentarios{
+    width: 690px;
+    height: 210px;
+    display: block;       
+    margin-left: auto;     
+    margin-right: auto;
+  }
+
+/* FIRMA */
+
+#canvas {
+    border: 1px solid grey; 
+    display: block;       
+    margin-right: auto;
+}
+
+.enviar{
+    width: 240px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #20d826;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+
