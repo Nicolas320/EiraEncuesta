@@ -83,7 +83,7 @@
         <span>*</span>
         <br>
         <br>
-        <select class="caja4" for="municipio_atencion" required>
+        <select class="caja4" name="municipio_atencion" required>
             <option value="">Selecciona</option>
             <option value="Balboa">Balboa</option>
             <option value="Buenos Aires">Buenos Aires</option>

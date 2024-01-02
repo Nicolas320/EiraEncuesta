@@ -7,11 +7,11 @@ use App\Models\Registro;
 
 class FormularioController extends Controller
 {
-    public function encuesta(Request $request)
+    public function datos(Request $request)
     {
-        $request->validate([
+        $validatedData = $request->validate([
             'tipo_documento' => 'required|string',
-            'numero_documento' => 'required|string',
+            'numero_documento' => 'required|numeric',
             'nombres_apellidos' => 'required|string',
             'telefono' => 'required|string',
             'fecha_atencion' => 'required|date',
@@ -22,23 +22,10 @@ class FormularioController extends Controller
             'servicio_atendido' => 'required|string',
         ]);
 
-        $registro = new Registro([
-            'tipo_documento' => $request->get('tipo_documento'),
-            'numero_documento' => $request->get('numero_documento'),
-            'nombres_apellidos' => $request->get('nombres_apellidos'),
-            'telefono' => $request->get('telefono'),
-            'fecha_atencion' => $request->get('fecha_atencion'),
-            'municipio_atencion' => $request->get('municipio_atencion'),
-            'modalidad_atencion' => $request->get('modalidad_atencion'),
-            'tiene_alguna_discapacidad' => $request->get('tiene_alguna_discapacidad'),
-            'tipo_discapacidad' => $request->get('tipo_discapacidad', ''),
-            'servicio_atendido' => $request->get('servicio_atendido'),
-        ]);
+        $encuesta = new Registro($validatedData); 
+        
+        $encuesta->save();
 
-        $registro->save();
-
-        return redirect()->route('index.Finformulario')->with('success', 'Registro guardado exitosamente.');
+        return redirect()->route('guardar.registro')->with('success', 'Encuesta llenada!!');
     }
-
-
 }
