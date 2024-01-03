@@ -14,11 +14,13 @@ class FormularioController extends Controller
     
     public function guardarEncuesta(Request $request)
     {
+        // dd($request);
+        
         $validatedData = $request->validate([
             'tipo_documento' => 'required|string',
                     'numero_documento' => 'required|numeric',
                      'nombres_apellidos' => 'required|string',
-                     'telefono' => 'required|string',
+                     'telefono' => 'required|numeric',
                      'fecha_atencion' => 'required|date',
                      'municipio_atencion' => 'required|string',
                      'modalidad_atencion' => 'required|string',
@@ -34,7 +36,7 @@ class FormularioController extends Controller
                     'recomendacion' => 'required|string|max:255',
                     'comentarios' => 'nullable|string|max:255',
                     /* FIRMAS */
-                    'firma' => 'required|string',
+                    // 'firma' => 'required|string',
 
                 ]);
 

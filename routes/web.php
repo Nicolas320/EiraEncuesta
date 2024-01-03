@@ -29,13 +29,7 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
-/* GUARDAR FIRMAS */
  
-//  Route::get('/recoger-firma', [FirmaController::class, 'index']);
-
-//  Route::post('/guardar-firma', [FirmaController::class, 'store']);
-
-
 
 
 

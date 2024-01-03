@@ -221,7 +221,6 @@
 
     <canvas id="canvas" width="500" height="200"></canvas>
 
-    <!-- <button onclick="guardarFirma()">Guardar Firma</button> -->
 
 <span onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline;">Limpiar Firma</span>
 

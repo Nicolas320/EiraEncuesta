@@ -11,6 +11,7 @@ class FirmaController extends Controller
 {
     public function store(Request $request)
     {
+        dd($request);
         $data = $request->validate([
             'firma' => 'required|string',
         ]);
