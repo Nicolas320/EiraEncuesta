@@ -250,10 +250,13 @@
         <br>
 
 
-        <label class="parraf2" for="">Firma</label>
+        <label class="parraf2" name="firma">Firma</label>
     <span>*</span>
 
-    <canvas id="canvas" width="500" height="200"></canvas>
+    <canvas id="canvas" name="firma" width="500" height="200"></canvas>
+
+    <input type="hidden" id="firma_oculta" name="firma" value="">
+
 
 
     <span onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline;">Limpiar Firma</span>
@@ -271,3 +274,6 @@
     </form>
     </body>
     </html>
+
+
+    http://127.0.0.1:8000/

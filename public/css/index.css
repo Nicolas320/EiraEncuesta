@@ -205,21 +205,3 @@ table {
 
 
 /* CAJA IZQ - DER */
-
-.form-line {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    padding-top: 0;
-    padding-bottom: 0;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: start;
-    align-items: flex-start;
-    padding: 12px 10px;
-    margin: 12px 4px;
-    border-radius: 3px;
-    position: relative;
-    width: 100%;
-    transition: background-color .15s;
-}

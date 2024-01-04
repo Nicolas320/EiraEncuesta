@@ -36,7 +36,7 @@ class FormularioController extends Controller
                     'recomendacion' => 'required|string|max:255',
                     'comentarios' => 'nullable|string|max:255',
                     /* FIRMAS */
-                    // 'firma' => 'required|string',
+                    'firma' => 'required|string',
 
                 ]);
 
