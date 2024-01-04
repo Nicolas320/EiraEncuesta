@@ -1,12 +1,11 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+
 }
 
 body{
-    background-color: #bde2ff;
-
-    /*  0168b8 */
-
+    background-color: #edf8ff;
 }
 
 form {
@@ -46,6 +45,8 @@ span{
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    position: relative;
+    top: -160px;
 }
 
 .parraf1 {
@@ -59,7 +60,6 @@ span{
     line-height: 1.9; 
 
 }
-
 .parraf2{
     width: 700px;
     height: 50px;
@@ -67,6 +67,24 @@ span{
     margin: 0 auto;
     font-size: 18px;
     color: mediumblue;
+    position: relative;
+    top: -150px;
+}
+
+.parrafop{
+    width: 700px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: mediumblue;
+    position: relative;
+    top: -150px;
+}
+
+table{
+    position: relative;
+    top: -160px;
 }
 
 /* SUB TITULOS */
@@ -87,7 +105,6 @@ span{
     border-radius: 5px;
     font-size: 15px;
     height: 40px;
-
 }
 option{
     font-size: 18px;
@@ -95,18 +112,38 @@ option{
 
 }
 
-/* .caja2 {
+.caja2 {
+    text-align: right; 
+    margin-right: auto 10px;
+    position: relative;
+    top: -79px;
+
+
+} 
+.caja3{
+    position: relative;
+    top: -50px;
+}
+.cajatl{
     text-align: right; 
     margin-left: auto; 
-    margin-right: auto 10px;
+    position: relative;
+    top: -150px;
 
-} */
+}
 
 .caja4{
     border-radius: 5px;
     font-size: 15px;
     height: 40px;
     width: 305px;
+}
+.caja4edit{
+    position: relative;
+    top: -214px;
+    text-align: right; 
+    margin-left: auto; 
+    margin-right: auto 10px;
 }
 .caja5{
     border-radius: 5px;
@@ -121,10 +158,63 @@ option{
     width: 305px;
 }
 
+.caja7{
+    position: relative;
+    top: -190px;
+
+}
+.caja8{
+    position: relative;
+    top: -270px;
+    text-align: right; 
+    margin-left: auto; 
+    margin-right: auto 10px;
+}
+.caja9{
+    position: relative;
+    top: -220px;
+}
+.caja10{
+    position: relative;
+    top: -210px;
+}
+.caja11{
+    position: relative;
+    top: -125px;
+}
+.radiotp{
+    margin-left: auto; 
+    margin-right: auto 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    left: -100px ;
+    }
+
+.right{
+    position: absolute;
+    right: 100px;
+}
+
+
+
 .inp {
     margin-left: auto; 
     margin-right: auto;
     height: 35px;
+    width: 300px;
+}
+
+/* cALENDARIO */
+.fcdt{
+    width: 300px;
+    height: 37px; 
+   
+}
+.fcdt1{
+    position: relative;
+    top: -130px;
+
 }
 
 
@@ -178,6 +268,8 @@ table {
     display: block;       
     margin-left: auto;     
     margin-right: auto;
+    position: relative;
+    top: -150px;
   }
 
 /* FIRMA */
@@ -186,6 +278,17 @@ table {
     border: 1px solid grey; 
     display: block;       
     margin-right: auto;
+    position: relative;
+    top: -120px;
+    margin-left: 30px; 
+}
+
+.limpiar{
+    position: relative;
+    left: 490px;
+    top: -120px;
+    font-size: 10px;
+    background-color: #bde2ff;
 }
 
 .enviar{

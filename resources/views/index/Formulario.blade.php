@@ -29,11 +29,13 @@
 
     <h2 class="title2">DATOS PERSONALES</h2>
 
+    <li class="caja1">
     <label class="TD" for="">Tipo de Documento</label>
         <span>*</span>
         <br>
         <br>
-        <select class="caja1" name="tipo_documento" id="tipo_documento" required>
+        <br>
+        <select class="caja1"  name="tipo_documento" id="tipo_documento" required>
             <option value="">Seleccione</option>
             <option value="CC - Cedula ciudadania">CC - Cedula ciudadania</option>
             <option value="CE - Cedula extranjeria">CE - Cedula extranjeria</option>
@@ -47,51 +49,53 @@
             <option value="AS - Adulto sin identificar">AS - Adulto sin identificar</option>
             <option value="MS - Menos sin identificar">MS - Menos sin identificar</option>
         </select>
-
+</li>
         <br>
         <br>
 
-        <div class="caja2">
+        <li class="caja2">
             <label class="ND" for="Número de documento">Número de documento</label>
             <span>*</span>
             <br>
             <br>
             <input class="inp" type="number" placeholder="Por ej., 23" name="numero_documento" required>
-        </div>
+        </li>
 
         <br>
 
-        <div class="caja3">
+        <li class="caja3">
             <label class="NYA" for="">Nombres y apellidos</label>
             <span>*</span>
             <br>
             <br>
             <input class="inp" placeholder="" name="nombres_apellidos" type="text" required>
-        </div>
+        </li>
         
         <br>
 
-        <div class="caja3">
+        <li class="cajatl">
             <label class="TL"  for="">Teléfono</label>
             <span>*</span>
             <br>
             <br>
-            <input class="inp" type="number" placeholder="Por ej., 23" name="telefono" type="text" required>
-        </div>
+            <input class="inp" placeholder="Por ej., 23" name="telefono" type="text" required>
+        </li>
 
         <br>
+
+        <li class="fcdt1">
+
         
             <label class="TL" for="">Fecha de atención</label>
             <span>*</span>
             <br>
             <br>
-            <input type="date" name="fecha_atencion" required>
+            <input class="fcdt" type="date" name="fecha_atencion" required>
+        </li>
 
-            <br>
         <div>
 
-        <br>
-
+        <li class="caja4edit">
             <label class="TD"  for="">Municipio de atención</label>
             <span>*</span>
             <br>
@@ -105,31 +109,35 @@
                 <option value="Popayán">Popayán</option>
             </select>
         </div>
+        </li>
 
         <br>
 
-        <div>
+        <li class="caja7">
             <label class="MA">Modalidad de Atención</label>
             <span>*</span>
             <br>
             <br>
             <input type="radio" name="modalidad_atencion" value="intramuros" required> Intramural
             <input type="radio" name="modalidad_atencion" value="extramural" required> Extramural
-        </div>
+        </li>
 
         <br>
 
-        <div>
+        <li class="caja8">
         <label class="MA" required >Tiene alguna discapacidad</label>
+        <span>*</span>
         <br>
         <br>
-        <input type="radio" name="tiene_alguna_discapacidad" value="si"> Si
-        <input type="radio" name="tiene_alguna_discapacidad" value="no"> No
-    </div>
+        <div class="radiotp">
+        <input  type="radio" name="tiene_alguna_discapacidad" value="si"> Si
+        <input  type="radio" name="tiene_alguna_discapacidad" value="no"> No
+        </div>
+        </li>
 
     <br>
 
-    <div id="tipoDiscapacidadField" style="display: none;">
+    <li class="caja9" id="tipoDiscapacidadField" style="display: none;">
         <label class="TD" for="">Tipo de Discapacidad</label>
         <span>*</span>
         <br>
@@ -144,42 +152,49 @@
             <option value="Psicosocial">Psicosocial</option>
             <option value="Multiple">Múltiple</option>
         </select>
-    </div>
+    </li>
 
 
-<div class="form-line jf-required">
+        <li class="caja10">
             <label class="TD">Servicio en que fue atendido</label>
             <span>*</span>
             <br>
             <br>
                 <input type="radio" name="servicio_atendido" value="Medicina General">Medicina General  
                 <br>
+                <div class="right">
                 <input type="radio" name="servicio_atendido" value="Medicina Interna">Medicina Interna
+                </div>
                 <br>
                 <input type="radio" name="servicio_atendido" value="Nutricion">Nutricion
                 <br>
+                <div class="right">
                 <input type="radio" name="servicio_atendido" value="Psicologia">Psicologia
+                </div>
                 <br>
                 <input type="radio" name="servicio_atendido" value="Enfermeria">Enfermeria
                 <br>
+                <div class="right">
                 <input type="radio" name="servicio_atendido" value="Nefrologia">Nefrologia 
+                </div>
                 <br>
                 <input type="radio" name="servicio_atendido" value="Endocrinologia">Endocrinologia 
                 <br>
-                <input type="radio" name="servicio_atendido" value="Fisioterapia">Fisioterapia"
+                <div class="right">
+                <input type="radio" name="servicio_atendido" value="Fisioterapia">Fisioterapia
+                </div>
                 <br>
                 <input type="radio" name="servicio_atendido" value="Trabajo Social">Trabajo Social
                 <br>
+                <div class="right">
                 <input type="radio" name="servicio_atendido" value="Toma de Muestras de Laboratorio">Toma de Muestras de Laboratorio
+                </div>
                 <br>
                 <input type="radio" name="servicio_atendido" value="Otro">Otro 
-            </div>
-
-            <br>
+        </li>
 
             <h1 class="title2">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
             <div class="parraf2">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción</div>
-
     <table>
         <tr>
             <th></th>
@@ -222,14 +237,10 @@
             <td><input type="radio" name="experiencia_salud" value="MUY MALA"></td>
         </tr>
 
-        <br>
-        <br>
-
     </table>
-
-            <div class="parraf2">¿Recomendaría a sus familiares y amigos esta IPS?</div>
-
-            <!-- <span>*</span> -->
+            
+            <label class="parrafop">¿Recomendaría a sus familiares y amigos esta IPS?</label>
+            <div class="caja11">
 
             <input class="seleccion" type="radio" name="recomendacion" value="Definitiavamente SI" >Definitiavamente SI
             <br>
@@ -238,6 +249,7 @@
             <input class="seleccion" type="radio" name="recomendacion" value="Probablemente SI" >Probablemente SI
             <br>
             <input class="seleccion" type="radio" name="recomendacion" value="Probablemente NO">Probablemente NO
+        </div>
             <br>
             <br>
 
@@ -251,7 +263,7 @@
 
 
         <label class="parraf2" name="firma">Firma</label>
-    <span>*</span>
+    <!-- <span>*</span> -->
 
     <canvas id="canvas" name="firma" width="500" height="200"></canvas>
 
@@ -259,7 +271,7 @@
 
 
 
-    <span onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline;">Limpiar Firma</span>
+    <span class="limpiar" onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline none;">Limpiar</span>
 
         <div>
             <button class="enviar" type="submit">Enviar</button>
@@ -276,4 +288,3 @@
     </html>
 
 
-    http://127.0.0.1:8000/
