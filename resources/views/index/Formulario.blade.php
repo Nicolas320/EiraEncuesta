@@ -254,18 +254,13 @@
     <span>*</span>
 
     <canvas id="canvas" width="500" height="200"></canvas>
-        <input type="hidden" id="signature-data" name="firma">
 
 
     <span onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline;">Limpiar Firma</span>
 
-    <br>
-    <br>
-    <br>
-
-            <div>
-                <button class="enviar" type="submit">Enviar</button>
-            </div>
+        <div>
+            <button class="enviar" type="submit">Enviar</button>
+        </div>
 
         <script src="js/index.js"></script>
 
