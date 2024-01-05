@@ -29,6 +29,11 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
+Route::post('/generar-pdf', [PdfController::class, 'generarPdf'])->name('generar.Pdf');
+
+
+
+
  
 
 

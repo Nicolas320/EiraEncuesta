@@ -97,60 +97,38 @@ table{
     font-size: 18px;
 }
 
-
-
 /* CAJAS */
 
 .caja1{
-    border-radius: 5px;
-    font-size: 15px;
-    height: 40px;
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: grey;
 }
-option{
+
+.caja2{
+    margin-left: 420px; 
+    position: relative;
+    top: -70px;
+    border-radius: 10px;
+}
+.caja4{
+    border-radius: 10px;
+    width: 305px;
+    height: 50px;
+
+}
+.caja5{
+    width: 305px;
+    height: 50px;
+    border-radius: 5px;
     font-size: 18px;
     color: grey;
 
 }
 
-.caja2 {
-    text-align: right; 
-    margin-right: auto 10px;
-    position: relative;
-    top: -79px;
 
-
-} 
-.caja3{
-    position: relative;
-    top: -50px;
-}
-.cajatl{
-    text-align: right; 
-    margin-left: auto; 
-    position: relative;
-    top: -150px;
-
-}
-
-.caja4{
-    border-radius: 5px;
-    font-size: 15px;
-    height: 40px;
-    width: 305px;
-}
-.caja4edit{
-    position: relative;
-    top: -214px;
-    text-align: right; 
-    margin-left: auto; 
-    margin-right: auto 10px;
-}
-.caja5{
-    border-radius: 5px;
-    font-size: 15px;
-    height: 40px;
-    width: 305px;
-}
 .caja6{
     border-radius: 5px;
     font-size: 15px;
@@ -160,19 +138,19 @@ option{
 
 .caja7{
     position: relative;
-    top: -190px;
+    top: -155px;
+
 
 }
 .caja8{
     position: relative;
-    top: -270px;
-    text-align: right; 
-    margin-left: auto; 
-    margin-right: auto 10px;
+    left: 500px;
+    top: -240px;
 }
 .caja9{
     position: relative;
     top: -220px;
+
 }
 .caja10{
     position: relative;
@@ -188,7 +166,7 @@ option{
     margin-right: 10px;
     margin-left: 10px;
     position: relative;
-    left: -100px ;
+    left: 40px ;
     }
 
 .right{
@@ -197,24 +175,41 @@ option{
 }
 
 
-
 .inp {
-    margin-left: auto; 
-    margin-right: auto;
-    height: 35px;
-    width: 300px;
+    width: 300px; 
+    height: 40px; 
+    padding: 5px; 
+    font-size: 16px; 
+    border-radius: 10px;
+}
+
+.cajatl{
+    
+    margin-left: 420px; 
+    position: relative;
+    top: -115px;
+    border-radius: 10px;
+}
+
+.caja4edit{
+    position: relative;
+    left: 420px;
+    top: -180px;
+   
 }
 
 /* cALENDARIO */
 .fcdt{
     width: 300px;
     height: 37px; 
+    border-radius: 10px;
+    font-size: 18px;
+    color: grey;
    
 }
 .fcdt1{
     position: relative;
-    top: -130px;
-
+    top: -90px;
 }
 
 
@@ -307,4 +302,6 @@ table {
 }
 
 
-/* CAJA IZQ - DER */
+
+
+

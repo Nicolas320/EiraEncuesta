@@ -8,6 +8,7 @@
         <title>ENCUESTA DE SATISFACCION EIRA SALUD IPS</title>
     </head>
     <body>
+
         
     <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
 
@@ -49,7 +50,7 @@
             <option value="AS - Adulto sin identificar">AS - Adulto sin identificar</option>
             <option value="MS - Menos sin identificar">MS - Menos sin identificar</option>
         </select>
-</li>
+    </li>
         <br>
         <br>
 
@@ -84,7 +85,6 @@
         <br>
 
         <li class="fcdt1">
-
         
             <label class="TL" for="">Fecha de atención</label>
             <span>*</span>
@@ -284,6 +284,7 @@
         <script src="js/firma.js"></script>
 
     </form>
+
     </body>
     </html>
 
