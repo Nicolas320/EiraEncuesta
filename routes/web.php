@@ -4,8 +4,7 @@ use App\Http\Controllers\AtencionIndividualController;
 use App\Http\Controllers\FinEncuestaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormularioController;
-use App\Http\Controllers\FirmaController;
-
+use App\Http\Controllers\PDFController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,8 +28,13 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
-Route::post('/generar-pdf', [PdfController::class, 'generarPdf'])->name('generar.Pdf');
 
+
+Route::get('/formulario', [PDFController::class, 'showForm'])->name('show.form');
+
+Route::post('/guardar-datos', [PDFController::class, 'saveData'])->name('save.data');
+
+Route::get('/generar-pdf', [PDFController::class, 'generatePdf'])->name('generate.pdf');
 
 
 

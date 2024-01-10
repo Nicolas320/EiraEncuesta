@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/index.css') }}">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
         <link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
         <title>ENCUESTA DE SATISFACCION EIRA SALUD IPS</title>
     </head>
@@ -23,11 +24,9 @@
         por ello queremos conocer su grado de satisfacción con respecto a los servicios recibidos. 
         Agradecemos su sinceridad y tiempo, para responder las preguntas.
     </div>
-
     <br>
     <br>
     <br>
-
     <h2 class="title2">DATOS PERSONALES</h2>
 
     <li class="caja1">
@@ -193,7 +192,7 @@
                 <input type="radio" name="servicio_atendido" value="Otro">Otro 
         </li>
 
-            <h1 class="title2">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
+            <h1 class="titleat">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
             <div class="parraf2">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción</div>
     <table>
         <tr>
@@ -283,9 +282,8 @@
 
         <script src="js/firma.js"></script>
 
-    </form>
+        <!-- <a href="{{ route('generate.pdf') }}" class="btn btn-primary">Descargar PDF</a> -->
 
+    </form>
     </body>
     </html>
-
-
