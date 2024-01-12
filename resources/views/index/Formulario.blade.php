@@ -282,7 +282,9 @@
 
         <script src="js/firma.js"></script>
 
-        <!-- <a href="{{ route('generate.pdf') }}" class="btn btn-primary">Descargar PDF</a> -->
+
+        
+ 
 
     </form>
     </body>

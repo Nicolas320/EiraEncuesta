@@ -29,16 +29,11 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
 
+// Route::get('users/pdf  ', [PDFController::class, 'pdf'])->name('admin.users.pdf');
 
-Route::get('/formulario', [PDFController::class, 'showForm'])->name('show.form');
-
-Route::post('/guardar-datos', [PDFController::class, 'saveData'])->name('save.data');
-
-Route::get('/generar-pdf', [PDFController::class, 'generatePdf'])->name('generate.pdf');
+Route::get('/buscar', [FinEncuestaController::class, 'buscar'])->name('buscar.registros');
 
 
-
- 
 
 
 

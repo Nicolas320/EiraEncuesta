@@ -1,0 +1,100 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+
+}
+
+
+
+
+form {
+    width: 750px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #e0b7fd;
+    position: relative;
+    top: -130px;
+   
+}
+
+h1 {
+    text-align: center;
+    color: #0168b8;
+    font-size: 40px;
+}
+
+p{
+    text-align: center;
+}
+
+img{
+display: block;
+margin: 0 auto;
+margin-bottom: 20px;    
+}
+
+.grid-container {
+    display: grid;
+    place-items: center;
+    height: 100vh; 
+}
+
+.search{
+    text-align: center;
+    position: relative;
+    top: -250px;
+}
+
+input{
+    border-radius: 5px;
+    font-size: 18px;
+    height: 30px;    
+}
+
+button{
+    padding: 10px 20px;
+    background-color: #20d826;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+a{
+    color: white;
+    padding: 10px 20px;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.a2{
+    background-color: none;
+}
+
+
+.tablad{
+    margin: 20px;
+    overflow-x: auto;
+    font-family: 'Rubik', sans-serif;
+    position: relative;
+    top: 100px;
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;    
+}
+
+.table-container {
+    position: relative;
+    top: -280px;
+}
