@@ -48,6 +48,7 @@
                     <th>Número de Documento</th>
                     <th>Nombres y Apellidos</th>
                     <th>Teléfono</th>
+                    <th>Firma</th>
                 </tr>
             </thead>
             <tbody>
@@ -58,6 +59,11 @@
                         <td>{{ $registro->numero_documento }}</td>
                         <td>{{ $registro->nombres_apellidos }}</td>
                         <td>{{ $registro->telefono }}</td>
+                        <td>
+                            <a href="{{ route('mostrar.firma', ['id' => $registro->id]) }}" target="_blank" class="btn btn-primary">Ver Firma</a>
+                        </td>
+
+                        
                     </tr>
                 @endforeach
             </tbody>

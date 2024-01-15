@@ -28,10 +28,26 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
-
-// Route::get('users/pdf  ', [PDFController::class, 'pdf'])->name('admin.users.pdf');
+// BUSCAR REGISTROS 
 
 Route::get('/buscar', [FinEncuestaController::class, 'buscar'])->name('buscar.registros');
+
+
+//VER - DESCARGAR FIRMA
+
+Route::get('/mostrar-firma/{id}', [FormularioController::class, 'mostrarFirma'])->name('mostrar.firma');
+
+
+
+
+
+
+
+//RUTAS PDF
+
+ //Route::get('index/pdf  ', [PDFController::class, 'pdf'])->name('admin.users.pdf');
+
+
 
 
 

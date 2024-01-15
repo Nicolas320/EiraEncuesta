@@ -8,6 +8,8 @@ use App\Models\Registro;
 use Illuminate\Support\Facades\DB;
 use App\Models\Atencion;
 use App\Models\Firma;
+use Illuminate\Support\Facades\Log;
+
 
 class FormularioController extends Controller
 {
@@ -15,7 +17,8 @@ class FormularioController extends Controller
     public function guardarEncuesta(Request $request)
     {
         // dd($request);
-       
+        $firmaBase64 = base64_encode($request->input('firma')); 
+        
         $validatedData = $request->validate([
             'tipo_documento' => 'required|string',
                     'numero_documento' => 'required|numeric',
@@ -63,5 +66,24 @@ class FormularioController extends Controller
             return redirect()->back()->with('error', 'Error al guardar la encuesta.');
         }
     }
+
+    public function mostrarFirma($id)
+    {
+        try {
+            Log::info('Mostrando firma para ID: ' . $id);
+    
+            $firma = Firma::findOrFail($id);
+            
+            $firmaDecodificada = base64_decode($firma->firma_base64);
+    
+            return response($firmaDecodificada)->header('Content-Type', 'image/png'); 
+        } catch (\Exception $e) {
+            Log::error('Error al mostrar la firma: ' . $e->getMessage());
+            return response('Error al mostrar la firma', 500);
+        }
+    }
+
+    
+
  
 }
