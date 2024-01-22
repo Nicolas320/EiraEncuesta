@@ -2,22 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\FormData;
-use Illuminate\Http\Request;
 use PDF;
 use App\Models\PDF as ModelsPDF;
+use App\Models\Subdirectorio\FinEncuesta;
+
+use Barryvdh\DomPDF\PDF as DomPDFPDF;
+
+use \TCPDF;
+
+use Illuminate\Database\Eloquent\Model;
+
 
 class PDFController extends Controller
 {
-    public function showForm()
-    {
-        return view('form');
-    }
-
     public function pdf()
     {
-        $users = User::all();
-        $pdf = PDF::loadView('admin.users.pdf', compact('users'));
+        $index = FinEncuesta::all();
+        $pdf = PDF::loadView('index.pdf', compact('index'));
         return $pdf->stream();
     }
+
 }

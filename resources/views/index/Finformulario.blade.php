@@ -14,13 +14,16 @@
 
     <form action="{{ route('buscar.registros') }}" method="GET">
 
-    <a class="a2" href="{{ url('/') }}">
+    <a class="" href="{{ url('/') }}">
     <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
     </a>
 
     <h1>Gracias!</h1>
         <p for="">Sus datos han sido recibidos</p>
+        <a class="pdf" href="{{('pdf')}}">Descargar PDF</a>
         </div>
+
+
 
 
     <div class="search">
@@ -29,7 +32,7 @@
             <button type="submit">Buscar</button>
         </span>
 
-                <a href="{{ url('finEncuesta') }}" class="boton1">Limpiar</a>
+               <a href="{{ url('finEncuesta') }}" class="boton1">Limpiar</a>
     </div>
 
 
@@ -60,10 +63,9 @@
                         <td>{{ $registro->nombres_apellidos }}</td>
                         <td>{{ $registro->telefono }}</td>
                         <td>
-                            <a href="{{ route('mostrar.firma', ['id' => $registro->id]) }}" target="_blank" class="btn btn-primary">Ver Firma</a>
                         </td>
 
-                        
+
                     </tr>
                 @endforeach
             </tbody>

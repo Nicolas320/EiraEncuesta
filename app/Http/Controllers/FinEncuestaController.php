@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Registro;  // Asegúrate de importar el modelo Registro aquí
+use App\Models\Registro;
 
 
 use Illuminate\Http\Request;
@@ -30,8 +30,8 @@ class FinEncuestaController extends Controller
 
 
 
- 
-   
 
-            
+
+
+
 }

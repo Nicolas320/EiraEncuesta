@@ -11,14 +11,21 @@ class Atencion extends Model
     protected $table = 'atencion_individual';
 
 
-    protected $fillable = [
-        'trato_personal',
-        'tiempo_espera',
-        'privacidad_info',
-        'experiencia_salud',
-        'recomendacion',
-        'comentarios'
-    ];
+    // protected $fillable = [
+    //     'trato_personal',
+    //     'tiempo_espera',
+    //     'privacidad_info',
+    //     'experiencia_salud',
+    //     'resultados_atencion',
+    //     'recomendacion',
+    //     'comentarios',
+    //     'registro_id'
+    // ];
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
+
+    public function registro()
+    {
+        return $this->belongsTo(Registro::class, 'registro_id');
+    }
 }
-
-

@@ -14,13 +14,15 @@ class CreateRegistrosTable extends Migration
             $table->string('numero_documento');
             $table->string('nombres_apellidos');
             $table->string('telefono');
+            $table->string('direccion');
+            $table->string('genero');
             $table->date('fecha_atencion');
             $table->string('municipio_atencion');
             $table->string('modalidad_atencion');
             $table->string('tiene_alguna_discapacidad');
             $table->string('tipo_discapacidad');
             $table->string('servicio_atendido');
-            
+            $table->string('otro');
             $table->timestamps();
         });
     }

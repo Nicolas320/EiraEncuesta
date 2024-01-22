@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: #edf8ff;
+    background-color: #F3F3FE;
 }
 
 form {
@@ -25,7 +25,7 @@ h1{
 img{
     display: block;
     margin: 0 auto;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
 }
 /* REQUERIDO */
 span{
@@ -54,7 +54,7 @@ span{
     font-weight: bold;
     font-size: 20px;
     position: relative;
-    top: -180px;
+    top: -150px;
 }
 
 .parraf1 {
@@ -65,7 +65,7 @@ span{
     margin: 0 auto;
     font-size: 16px;
     color: rgb(73, 73, 73);
-    line-height: 1.9; 
+    line-height: 1.9;
 
 }
 .parraf2{
@@ -79,6 +79,28 @@ span{
     top: -150px;
 }
 
+.parraf2C{
+    width: 700px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: mediumblue;
+    position: relative;
+    top: -80px;
+}
+
+.firmatext{
+    width: 700px;
+    height: 50px;
+    padding: 10px 20px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: mediumblue;
+    position: relative;
+    top: -80px;
+}
+
 .parrafop{
     width: 700px;
     height: 50px;
@@ -87,7 +109,7 @@ span{
     font-size: 18px;
     color: mediumblue;
     position: relative;
-    top: -150px;
+    top: -90px;
 }
 
 table{
@@ -116,10 +138,14 @@ table{
 }
 
 .caja2{
-    margin-left: 420px; 
+    margin-left: 420px;
     position: relative;
     top: -70px;
     border-radius: 10px;
+}
+.caja3{
+    position: relative;
+    top: -40px;
 }
 .caja4{
     border-radius: 10px;
@@ -168,10 +194,23 @@ table{
 }
 .caja11{
     position: relative;
-    top: -125px;
+    top: -80px;
 }
+
+.caja12 {
+    width: 720px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: grey;
+}
+
+.hidden {
+    display: none;
+}
+
 .radiotp{
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto 10px;
     margin-right: 10px;
     margin-left: 10px;
@@ -186,18 +225,18 @@ table{
 
 
 .inp {
-    width: 300px; 
-    height: 40px; 
-    padding: 5px; 
-    font-size: 16px; 
+    width: 300px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
     border-radius: 10px;
 }
 
 .cajatl{
-    
-    margin-left: 420px; 
+
+    margin-left: 420px;
     position: relative;
-    top: -115px;
+    top: -150px;
     border-radius: 10px;
 }
 
@@ -205,17 +244,38 @@ table{
     position: relative;
     left: 420px;
     top: -180px;
-   
+}
+
+.cajadr{
+    position: relative;
+    top: -100px;
+    padding: 5px;
+
+}
+
+.cajagnr{
+    position: relative;
+    top: -198px;
+    left: 420px;
+    padding: 5px;
+
+}
+.cajaopt{
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: grey;
 }
 
 /* cALENDARIO */
 .fcdt{
     width: 300px;
-    height: 37px; 
+    height: 37px;
     border-radius: 10px;
     font-size: 18px;
     color: grey;
-   
+
 }
 .fcdt1{
     position: relative;
@@ -270,30 +330,55 @@ table {
   .comentarios{
     width: 690px;
     height: 210px;
-    display: block;       
-    margin-left: auto;     
+    display: block;
+    margin-left: auto;
     margin-right: auto;
     position: relative;
-    top: -150px;
+    top: -70px;
   }
 
 /* FIRMA */
 
 #canvas {
-    border: 1px solid grey; 
-    display: block;       
-    margin-right: auto;
+    border: 1px solid grey;
+    display: block;
+    margin-right: center;
     position: relative;
-    top: -120px;
-    margin-left: 30px; 
+    top: -30px;
+    margin-left: 30px;
+
 }
 
 .limpiar{
     position: relative;
     left: 490px;
-    top: -120px;
+    top: -32px;
     font-size: 10px;
     background-color: #bde2ff;
+}
+
+
+.tipofirma{
+    font-size: 18px;
+    color: mediumblue;
+    position: relative;
+    top: -60px;
+}
+
+.firmastype{
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    color: grey;
+    position: relative;
+    top: -60px;
+    left: 50px;
+}
+.adjuntarfir{
+    font-size: 18px;
+    color: mediumblue;
+
 }
 
 .enviar{
@@ -304,14 +389,51 @@ table {
     font-size: 20px;
     padding: 10px 20px;
     background-color: #20d826;
-    color: white;
     border: none;
     cursor: pointer;
     display: block;
     margin: 0 auto;
 }
 
+/* CALCULAR */
 
+.calculos{
+    position: relative;
+    top: 140px;
+}
+.resultados{
+    width: 310px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    left: 400px;
+    top: -150px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(202, 202, 202);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.spanrst{
+    color: black;
+}
+
+.resultados2{
+    position: relative;
+    top: -100px;
+    background-color: #046bd2;
+    width: 240px;
+    height: 50px;
+    border-radius: 5px;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+
+}
 
 
 

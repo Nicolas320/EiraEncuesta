@@ -1,110 +1,112 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PDF FORMULARIO</title>
+    <link rel="stylesheet" href="{{ asset('css/resultados.css') }}">
+
+    <title>PDF ENCUESTA</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="assets/css/pdf.css">
-    <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
 
-    
 </head>
 
 <body>
 
-    <div id="header">
-        <img class="logo" src="IMG/logo.png" width="50px" height="50px">
-        <div class="text-logo">
-            <p>ENCUESTA DE SATISFACCION</p>
+    <form id="formulario">
+        <a  href="{{ url('/') }}">
+            <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
+        </a>
+
+        <h1 class="title">ENCUESTA DE SATISFACCION</h1>
+
+        <table>
+
+        <tr>
+            <td>Nombres y Apellidos</td>
+            <th>{{ isset($registro) ? $registro->nombres_apellidos : '' }}</th>
+        </tr>
+        <tr>
+            <td>Dirección</td>
+            <th>{{ isset($registro) ? $registro->direccion : '' }}</th>
+        </tr>
+        <tr>
+            <td>Teléfono</td>
+            <th>{{ isset($registro) ? $registro->telefono : '' }}</th>
+        </tr>
+        <tr>
+            <td>Género</td>
+            <th>{{ isset($registro) ? $registro->genero : '' }}</th>
+        </table>
+
+
+
+        <br>
+        <div class="califitext">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción?</div>
+        <br>
+
+        <table>
+            <tr>
+                <td>El trato recibido por el personal encargado</td>
+                <th>{{ isset($atencionIndividual) ? $atencionIndividual->trato_personal : '' }}</th>
+            </tr>
+
+            <tr>
+                <td>Tiempo de espera para ser atendido</td>
+                <th>{{ isset($atencionIndividual) ? $atencionIndividual->tiempo_espera : '' }}</th>
+            </tr>
+
+            <tr>
+                <td>La información, el trato y condiciones de privacidad</td>
+                <th>{{ isset($atencionIndividual) ? $atencionIndividual->privacidad_info : '' }}</th>
+            </tr>
+
+            <tr>
+                <td>Experiencia en general respecto a los servicios de salud</td>
+                <th>{{ isset($atencionIndividual) ? $atencionIndividual->experiencia_salud : '' }}</th>
+            </tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        <label class="textresultados" for="resultados_atencion">Resultados de Atencion:</label>
+
+        <textarea class="rstatencion" name="resultados_atencion" id="resultados_atencion" readonly>{{ isset($atencionIndividual) ? $atencionIndividual->resultados_atencion : '' }}</textarea>
+
+
+        <div class="comentarios">Escribe aquí tus comentarios, felicitaciones, quejas o inquietudes.</div>
+
+        <div class="comentario">
+            <br>
+            <br>
+            <textarea class="comentariosrst" name="comentarios" id="comentarios">{{ isset($atencionIndividual) ? $atencionIndividual->comentarios : '' }}</textarea>
         </div>
-        <h1 class="text-center">FORMULARIO</h1>
-    </div>
+        <br>
+        <br>
+
+    <div class="firma">Firma</div>
     <br>
-    <div class="container">
-
-        <div class="content-container">
-
-            <table class="table table-striped table-bordered pdf-table">
-                <thead class="cabecera">
-                    <tr>
-                        <th>ID</th>
-                        <th>SKU</th>
-                        <th>NOMBRE</th>
-                        <th>DESCRIPCIÓN</th>
-                        {{-- <th>IMAGEN</th> --}}
-                        <th>PRECIO</th>
-                        <th>STOCK</th>
-                        <th>ESTADO</th>
-                        <th>SUBCATEGORÍA</th>
-                    </tr>
-                </thead>
-
-                @if ($products->count())
-
-                    <tbody>
-                        @foreach ($products as $product)
-                            <tr>
-                                <td>{{ $product->id }}</td>
-                                <td>{{ $product->sku }}</td>
-
-                                <td>{{ $product->name }}</td>
-                                <td>{{ $product->description }}</td>
-                                {{-- <td><img src="{{ asset('storage/' . $product->image_path) }}" alt=""
-                                    style="max-width: 100px;">
-                            </td> --}}
-                                <td>{{ $product->price }}</td>
-                                <td>{{ $product->quantity }}</td>
-                                <td> @switch($product->status)
-                                        @case(1)
-                                            <span class="text-danger">
-                                                Borrador
-                                            </span>
-                                        @break
-
-                                        @case(2)
-                                            <span class="text-success">
-                                                Publicado
-                                            </span>
-                                        @break
-
-                                        @default
-                                    @endswitch
-                                </td>
-
-                                <td>{{ $product->subcategory->name }}</td>
-
-                            </tr>
-                        @endforeach
-                    </tbody>
-                @else
-                    <div>
-                        No hay productos registrados
-                    </div>
-
-                @endif
-
-            </table>
-        </div>
-    </div>
+    <br>
+    <br>
 
 
-    <div id="footer">
-        <p class="textFooter">Enamórate de cuidarte, enamórate de tí</p>
-    </div>
+    </form>
 
 
+    <form class="hola" action="{{ route('formulario.buscarPorId') }}" method="post">
+        @csrf
+        <label for="id">ID del registro:</label>
+        <input type="text" name="id" id="id" required>
+        <button type="submit">Buscar</button>
+        <br>
+        <br>
+    </form>
 
-    {{-- GENERAR REPORTES  PDF V--}}
-    <a href="{{ route('admin.categories.pdf') }}" class="btn btn-danger btn-lg" target="_blank" title="Ver Pdf"><i
-            class="fa-solid fa-file-pdf fa-lg" style="color: #ffffff;"></i></a>
-    <a href="{{ route('admin.categories.excel') }}" class="btn btn-success btn-lg" target="_blank" title="Ver Excel"><i
-            class="fa-solid fa-file-excel fa-lg" style="color: #ffffff;"></i></a>
-</body>
 
-</html> -->
+    </body>
+    </html>

@@ -4,7 +4,11 @@ use App\Http\Controllers\AtencionIndividualController;
 use App\Http\Controllers\FinEncuestaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormularioController;
+use App\Http\Controllers\ResultadosController;
 use App\Http\Controllers\PDFController;
+
+use App\Models\Registro;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,30 +30,33 @@ Route::get('/', function () {
 
 Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
 
-Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
-// BUSCAR REGISTROS 
+
+// BUSCAR REGISTROS
 
 Route::get('/buscar', [FinEncuestaController::class, 'buscar'])->name('buscar.registros');
 
-
-//VER - DESCARGAR FIRMA
-
-Route::get('/mostrar-firma/{id}', [FormularioController::class, 'mostrarFirma'])->name('mostrar.firma');
+Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
 
 
+Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');
 
 
+// FIRMA GET
+
+Route::get('firma/image/{id}', 'FirmaController@showImage')->name('firma.image');
 
 
 
 //RUTAS PDF
 
- //Route::get('index/pdf  ', [PDFController::class, 'pdf'])->name('admin.users.pdf');
+Route::get('/pdf', [ResultadosController::class, 'mostrarFormulario']);
 
+Route::get('/mostrar-formulario', [ResultadosController::class, 'mostrarFormulario'])->name('formulario.mostrar');
 
+Route::post('/buscar-por-id', [ResultadosController::class, 'buscarPorId'])->name('formulario.buscarPorId');
 
-
-
+// PDF 2
+ Route::get('index/pdf  ', [PDFController::class, 'pdf'])->name('index.pdf');
 
 

@@ -9,21 +9,33 @@ class Firma extends Model
 {
     use HasFactory;
 
+    protected $table = 'firmas';
+
+
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'firma',
+        'firma_digital',
+        'registro_id'
     ];
+
+    protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
      * The attributes that should be cast.
      *
      * @var array
      */
-    protected $casts = [
-        'firma' => 'string',
-    ];
+    // protected $casts = [
+    //     'firma' => 'string',
+    // ];
+
+
+    public function registro()
+{
+    return $this->belongsTo(Registro::class);
+}
 }
