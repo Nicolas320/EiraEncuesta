@@ -4,6 +4,7 @@ use App\Http\Controllers\AtencionIndividualController;
 use App\Http\Controllers\FinEncuestaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FormularioController;
+use App\Http\Controllers\GeneradorPDF;
 use App\Http\Controllers\ResultadosController;
 use App\Http\Controllers\PDFController;
 
@@ -57,6 +58,8 @@ Route::get('/mostrar-formulario', [ResultadosController::class, 'mostrarFormular
 Route::post('/buscar-por-id', [ResultadosController::class, 'buscarPorId'])->name('formulario.buscarPorId');
 
 // PDF 2
- Route::get('index/pdf  ', [PDFController::class, 'pdf'])->name('index.pdf');
+ Route::get('/index/pdf  ', [PDFController::class, 'pdf'])->name('index.pdf');
+
+
 
 

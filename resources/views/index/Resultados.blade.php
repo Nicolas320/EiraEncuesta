@@ -99,7 +99,7 @@
 
 
 </form>
-
+<a href="{{ url('/descargar-pdf') }}" class="btn btn-primary">Descargar PDF</a>
 
 <form class="hola" action="{{ route('formulario.buscarPorId') }}" method="post">
     @csrf
@@ -108,6 +108,7 @@
     <button type="submit">Buscar</button>
     <br>
     <br>
+
 </form>
 
 

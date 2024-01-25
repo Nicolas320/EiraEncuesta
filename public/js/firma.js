@@ -35,6 +35,3 @@ function mostrarCampo() {
       adjuntarFirmaContainer.classList.remove("hidden");
   }
 }
-
-
-

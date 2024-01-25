@@ -358,14 +358,14 @@
 <br>
 <br>
 <div id="firmaDigitalContainer" class="hidden">
-    <canvas id="canvas" name="firma" width="500" height="200"></canvas>
+    <canvas id="canvas" name="firma_digital" width="500" height="200"></canvas>
     <input type="hidden" id="firma_oculta" name="firma_digital" value="">
     <span class="limpiar" onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline none;">Limpiar</span>
 </div>
 
 <div id="adjuntarFirmaContainer" class="hidden">
     <label class="adjuntarfir" for="imagen">Adjuntar Firma:</label>
-    <input type="file" id="imagen" name="firma" accept="image/*">
+    <input type="file" id="imagen" name="firma_digital" accept="image/*">
 </div>
 
 <br>
@@ -383,5 +383,3 @@
 </form>
 </body>
 </html>
-
-

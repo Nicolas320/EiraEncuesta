@@ -48,7 +48,7 @@ var radioOtro = document.querySelector('input[name="servicio_atendido"][value="O
 
     // Función para validar que solo se ingresen números en algunos campos
     function ValidaSoloNumeros() {
-        if ((event.keyCode < 48) || (event.keyCode > 57)) 
+        if ((event.keyCode < 48) || (event.keyCode > 57))
             event.returnValue = false;
     }
 
@@ -112,4 +112,3 @@ var radioOtro = document.querySelector('input[name="servicio_atendido"][value="O
 
 
 
-    

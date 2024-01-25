@@ -33,3 +33,6 @@ class Registro extends Model
         return $this->hasMany(Atencion::class, 'registro_id', 'id');
     }
 }
+
+
+

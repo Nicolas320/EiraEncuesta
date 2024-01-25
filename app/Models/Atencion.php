@@ -10,18 +10,6 @@ class Atencion extends Model
     use HasFactory;
     protected $table = 'atencion_individual';
 
-
-    // protected $fillable = [
-    //     'trato_personal',
-    //     'tiempo_espera',
-    //     'privacidad_info',
-    //     'experiencia_salud',
-    //     'resultados_atencion',
-    //     'recomendacion',
-    //     'comentarios',
-    //     'registro_id'
-    // ];
-
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     public function registro()

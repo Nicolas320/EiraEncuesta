@@ -29,10 +29,6 @@ class Firma extends Model
      *
      * @var array
      */
-    // protected $casts = [
-    //     'firma' => 'string',
-    // ];
-
 
     public function registro()
 {
