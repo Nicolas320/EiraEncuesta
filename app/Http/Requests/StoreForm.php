@@ -40,6 +40,7 @@ class StoreForm extends FormRequest
             'recomendacion'             => 'required|string|max:255',
             'comentarios'               => 'nullable|string|max:255',
             'firma_digital'             => 'required|string',
+            'firma'                     => 'required|string',
             'otro'                      => 'nullable|string',
         ];
     }

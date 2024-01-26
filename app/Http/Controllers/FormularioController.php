@@ -50,7 +50,7 @@ class FormularioController extends Controller
 
             $firma_digital = array(
                 'firma_digital' => $request->input("firma_digital"),
-                // 'firma'=> $request->input('firma'),
+                'firma'=> $request->input('firma'),
                 'registro_id' => $registro_id
             );
 

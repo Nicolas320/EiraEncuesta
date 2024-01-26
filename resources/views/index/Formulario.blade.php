@@ -10,7 +10,6 @@
 </head>
 <body>
 
-
 <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
 
 
@@ -352,7 +351,8 @@
 <select class="firmastype" id="tipoFirma" onchange="mostrarCampo()">
     <option value="">Seleccione</option>
     <option value="firmaDigital">Firma Digital</option>
-    <option value="adjuntarFirma">Adjuntar Firma</option>
+    <option value="adjuntarFirma">No Firma</option>
+
 </select>
 
 <br>
@@ -365,7 +365,9 @@
 
 <div id="adjuntarFirmaContainer" class="hidden">
     <label class="adjuntarfir" for="imagen">Adjuntar Firma:</label>
-    <input type="file" id="imagen" name="" accept="image/*">
+    <input type="file" id="imagen" name="firma" accept="image/*">
+    <p>Nota: Al no adjuntar firma, cargara un tipo de campo que sea valido para la validacion del usuarios.
+       Ejemplo: Cedula de Ciudadania, Comprobante </p>
 </div>
 
 <br>
@@ -381,5 +383,7 @@
     <script src="js/firma.js"></script>
 
 </form>
+
+
 </body>
 </html>

@@ -19,6 +19,7 @@ class Firma extends Model
      */
     protected $fillable = [
         'firma_digital',
+        'firma',
         'registro_id'
     ];
 

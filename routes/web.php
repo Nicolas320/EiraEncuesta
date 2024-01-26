@@ -26,6 +26,10 @@ Route::get('/', function () {
     return view('index.Formulario');
 });
 
+// PDF 2
+Route::get('/usuarios/pdf  ', [PDFController::class, 'pdf'])->name('usuarios.pdf');
+
+
 
 //DATOS PERSONALES
 
@@ -57,8 +61,6 @@ Route::get('/mostrar-formulario', [ResultadosController::class, 'mostrarFormular
 
 Route::post('/buscar-por-id', [ResultadosController::class, 'buscarPorId'])->name('formulario.buscarPorId');
 
-// PDF 2
- Route::get('/index/pdf  ', [PDFController::class, 'pdf'])->name('index.pdf');
 
 
 

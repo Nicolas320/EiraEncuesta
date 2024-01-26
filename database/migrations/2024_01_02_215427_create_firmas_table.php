@@ -16,6 +16,7 @@ class CreateFirmasTable extends Migration
         Schema::create('firmas', function (Blueprint $table) {
             $table->id();
             $table->longText('firma_digital');
+            $table->string('firma');
             $table->unsignedBigInteger('registro_id')->nullable();
             $table->foreign('registro_id')->references('id')->on('registros')
                 ->onDelete('cascade')
