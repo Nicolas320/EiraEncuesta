@@ -21,7 +21,7 @@ class FormularioController extends Controller
 
         $resultadoRegistro = Registro::create($request->all());
 
-        dd($request);
+        // dd($request);
 
         if (is_numeric($resultadoRegistro->id)) {
             $registro_id = $resultadoRegistro->id;
@@ -63,9 +63,4 @@ class FormularioController extends Controller
 
     }
 
-
-
-
 }
-
-

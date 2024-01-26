@@ -22,6 +22,8 @@ class Firma extends Model
         'registro_id'
     ];
 
+
+
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
     /**
@@ -34,4 +36,6 @@ class Firma extends Model
 {
     return $this->belongsTo(Registro::class);
 }
+
+
 }

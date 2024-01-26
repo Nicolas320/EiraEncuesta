@@ -365,7 +365,7 @@
 
 <div id="adjuntarFirmaContainer" class="hidden">
     <label class="adjuntarfir" for="imagen">Adjuntar Firma:</label>
-    <input type="file" id="imagen" name="firma_digital" accept="image/*">
+    <input type="file" id="imagen" name="" accept="image/*">
 </div>
 
 <br>
