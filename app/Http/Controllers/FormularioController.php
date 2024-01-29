@@ -3,14 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreForm;
-use App\Models\AtencionIndividual;
-use Illuminate\Http\Request;
-use App\Models\Registro;
-use Illuminate\Support\Facades\DB;
 use App\Models\Atencion;
 use App\Models\Firma;
-use App\Http\Controllers\Image;
-use Illuminate\Support\Facades\Log;
+use App\Models\Registro;
 use Illuminate\Support\Facades\Storage;
 
 class FormularioController extends Controller
@@ -18,10 +13,7 @@ class FormularioController extends Controller
 
     public function guardarEncuesta(StoreForm $request)
     {
-
         $resultadoRegistro = Registro::create($request->all());
-
-        // dd($request);
 
         if (is_numeric($resultadoRegistro->id)) {
             $registro_id = $resultadoRegistro->id;
@@ -37,20 +29,26 @@ class FormularioController extends Controller
                 'registro_id' => $registro_id
             );
 
-
             if ($request->hasFile('firma')) {
                 $firma = $request->file('firma');
+
+                // Crear una carpeta con el nombre del registro_id en el directorio 'firmas'
+                $carpeta = 'firmas/' . $registro_id;
+                Storage::makeDirectory($carpeta);
+
+                // Generar un nombre único para la imagen
                 $nombreFirma = time() . '_' . $firma->getClientOriginalName();
-                $firma->move(public_path('firmas'), $nombreFirma);
+
+                // Mover la imagen a la carpeta recién creada
+                $firma->storeAs($carpeta, $nombreFirma);
 
             }
 
             $resultadoAtencion = Atencion::create($atencion);
 
-
             $firma_digital = array(
                 'firma_digital' => $request->input("firma_digital"),
-                'firma'=> $request->input('firma'),
+                'firma'=> isset($carpeta) ? $carpeta . '/' . $nombreFirma : null, // Ruta completa de la firma
                 'registro_id' => $registro_id
             );
 
@@ -60,7 +58,8 @@ class FormularioController extends Controller
                 return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
             }
         }
-
     }
+
+    // Otros métodos del controlador...
 
 }
