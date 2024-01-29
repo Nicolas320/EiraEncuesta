@@ -47,9 +47,9 @@
         <option value="AS - Adulto sin identificar">AS - Adulto sin identificar</option>
         <option value="MS - Menos sin identificar">MS - Menos sin identificar</option>
     </select>
-    @error('tipo_documento')
+    {{-- @error('tipo_documento')
         <small class="text-danger">*{{$message}}</small>
-    @enderror
+    @enderror --}}
 </li>
     <br>
     <br>
@@ -62,9 +62,9 @@
         <input class="inp" id="numero_documento" onkeypress="ValidaSoloNumeros()" type="text" placeholder="Por ej., 23"
             name="numero_documento" value="{{old('numero_documento')}}" required>
 
-        @error('numero_documento')
+        {{-- @error('numero_documento')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </li>
 
     <br>
@@ -75,10 +75,10 @@
         <br>
         <br>
         <input class="inp" placeholder="" name="nombres_apellidos" type="text" value="{{old('nombres_apellidos')}}" required>
-
+{{--
         @error('nombres_apellidos')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </li>
 
     <br>
@@ -112,15 +112,15 @@
         <span>*</span>
         <br>
         <br>
-    <select class="cajaopt" name="genero" id="genero">
+    <select class="cajaopt" name="genero" id="genero" required>
         <option value="">Selecciona</option>
         <option value="Masculino">Masculino</option>
         <option value="Femenino">Femenino</option>
     </select>
 
-    @error('genero')
+    {{-- @error('genero')
             <small class="text-danger">*{{$message}}</small>
-    @enderror
+    @enderror --}}
 </li>
 
     <br>
@@ -133,9 +133,9 @@
         <br>
         <input class="fcdt" type="date" name="fecha_atencion" value="{{old('fecha_atencion')}}" required>
 
-        @error('fecha_atencion')
+        {{-- @error('fecha_atencion')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </li>
 
 
@@ -154,10 +154,10 @@
             <option value="Patia">Patia</option>
             <option value="Popayán">Popayán</option>
         </select>
-
+{{--
         @error('municipio_atencion')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </div>
     </li>
 
@@ -179,17 +179,17 @@
     <br>
 
     <li class="caja8">
-    <label class="MA" required >Tiene alguna discapacidad</label>
+    <label class="MA">Tiene alguna discapacidad</label>
     <span>*</span>
     <br>
     <br>
     <div class="radiotp">
-    <input  type="radio" name="tiene_alguna_discapacidad" value="si"> Si
-    <input  type="radio" name="tiene_alguna_discapacidad" value="no"> No
+    <input  type="radio" name="tiene_alguna_discapacidad" value="si" required> Si
+    <input  type="radio" name="tiene_alguna_discapacidad" value="no" required> No
 
-        @error('tiene_alguna_discapacidad')
+        {{-- @error('tiene_alguna_discapacidad')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </div>
     </li>
 
@@ -211,12 +211,12 @@
         <option value="Multiple">Múltiple</option>
     </select>
 
-        @error('tipo_discapacidad')
+        {{-- @error('tipo_discapacidad')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
 </li>
 
-    <li class="caja10">
+    <li class="caja10" required>
         <label class="TD">Servicio en que fue atendido</label>
         <span>*</span>
         <br><br>
@@ -253,10 +253,10 @@
         <input type="radio" name="servicio_atendido" value="Otro">Otro<br><br>
 
         <input class="caja12 hidden" type="text" name="otro" placeholder="Digite su opcion">
-
+{{--
         @error('otro')
             <small class="text-danger">*{{$message}}</small>
-        @enderror
+        @enderror --}}
     </li>
         <h1 class="titleat">ATENCIÓN INDIVIDUAL y ASPECTOS GENERALES</h1>
         <div class="parraf2">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción <span>*</span></div>
@@ -309,9 +309,9 @@
 
 <textarea class="resultados" name="resultados_atencion" id="resultado"></textarea>
 
-    @error('resultados_atencion')
+    {{-- @error('resultados_atencion')
         <small class="text-danger">*{{$message}}</small>
-    @enderror
+    @enderror --}}
 
 
 
@@ -339,9 +339,9 @@
     <br>
     <textarea class="comentarios" name="comentarios" value="{{old('comentarios')}}" type="text"></textarea>
 
-    @error('comentarios')
+    {{-- @error('comentarios')
         <small class="text-danger">*{{$message}}</small>
-    @enderror
+    @enderror --}}
 
     <br>
     <br>
