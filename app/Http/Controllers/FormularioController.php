@@ -11,8 +11,13 @@ use Illuminate\Support\Facades\Storage;
 class FormularioController extends Controller
 {
 
+    // public function guardarEncuesta(StoreForm $request)
     public function guardarEncuesta(StoreForm $request)
     {
+        // dd($request);
+
+        $identificacion = $request->input("numero_documento");
+
         $resultadoRegistro = Registro::create($request->all());
 
         if (is_numeric($resultadoRegistro->id)) {
@@ -29,37 +34,30 @@ class FormularioController extends Controller
                 'registro_id' => $registro_id
             );
 
-            if ($request->hasFile('firma')) {
-                $firma = $request->file('firma');
-
-                // Crear una carpeta con el nombre del registro_id en el directorio 'firmas'
-                $carpeta = 'firmas/' . $registro_id;
-                Storage::makeDirectory($carpeta);
-
-                // Generar un nombre único para la imagen
-                $nombreFirma = time() . '_' . $firma->getClientOriginalName();
-
-                // Mover la imagen a la carpeta recién creada
-                $firma->storeAs($carpeta, $nombreFirma);
-
-            }
-
             $resultadoAtencion = Atencion::create($atencion);
 
-            $firma_digital = array(
-                'firma_digital' => $request->input("firma_digital"),
-                'firma'=> isset($carpeta) ? $carpeta . '/' . $nombreFirma : null, // Ruta completa de la firma
-                'registro_id' => $registro_id
-            );
+            if ($request->hasFile('firma')) {
+                // dd($request->hasFile('firma'));
+                $directory = 'public/firmas';
+                $extension = 'png';
+                $nombre = 'firma_' . $identificacion. '.' . $extension;
+                // dd($nombre);
+                $url = $request->file('firma')->storePubliclyAs($directory, $nombre, 'local');
+                // $url = $request->file('firma')->storePublicly($directory);
+                // dd($url);
+            }
 
-            $resultadoFirmaDigital = Firma::create($firma_digital);
+            // $firma_digital = array(
+            //     'firma_digital' => $request->input("firma_digital"),
+            //     'firma'=> isset($carpeta) ? $carpeta . '/' . $nombreFirma : null, // Ruta completa de la firma
+            //     'registro_id' => $registro_id
+            // );
 
-            if (is_numeric($resultadoFirmaDigital->id)) {
+            // $resultadoFirmaDigital = Firma::create($firma_digital);
+
+            if (is_numeric($resultadoAtencion->id)) {
                 return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
             }
         }
     }
-
-    // Otros métodos del controlador...
-
 }

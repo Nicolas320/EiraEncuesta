@@ -7,6 +7,7 @@ use App\Http\Controllers\FormularioController;
 use App\Http\Controllers\GeneradorPDF;
 use App\Http\Controllers\ResultadosController;
 use App\Http\Controllers\PDFController;
+use Illuminate\Support\Facades\Artisan;
 
 use App\Models\Registro;
 
@@ -60,6 +61,15 @@ Route::get('/pdf', [ResultadosController::class, 'mostrarFormulario']);
 Route::get('/mostrar-formulario', [ResultadosController::class, 'mostrarFormulario'])->name('formulario.mostrar');
 
 Route::post('/buscar-por-id', [ResultadosController::class, 'buscarPorId'])->name('formulario.buscarPorId');
+
+// /* storage link */
+Route::get('storage-link', function(){
+    Artisan::call('storage:link');
+    echo 'link generado';
+});
+
+
+
 
 
 

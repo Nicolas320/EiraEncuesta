@@ -26,6 +26,8 @@ class StoreForm extends FormRequest
             'numero_documento'          => 'required|numeric',
             'nombres_apellidos'         => 'required|string',
             'telefono'                  => 'required|numeric',
+            'direccion'                 => 'required|string|max:255',
+            'genero'                    => 'required|string|max:255',
             'fecha_atencion'            => 'required|date',
             'municipio_atencion'        => 'required|string',
             'modalidad_atencion'        => 'required|string',
@@ -39,9 +41,23 @@ class StoreForm extends FormRequest
             'resultados_atencion'       => 'required|string|max:255',
             'recomendacion'             => 'required|string|max:255',
             'comentarios'               => 'nullable|string|max:255',
-            'firma_digital'             => 'required|string',
-            'firma'                     => 'required|string',
+            // 'firma_digital'             => 'nullable|string',
+            'firma'                     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'otro'                      => 'nullable|string',
         ];
     }
+
+    public function messages()
+    {
+        return
+        [
+            'firma.required' => 'La imagen es obligatoria.',
+            'firma.image' => 'El archivo debe ser imagen.',
+            'firma.mimes' => 'Solo se permiten imagenes en formato jpeg,png,jpg o gif.',
+            'firma.max' => 'La imagen no deber ser mayor a 2 megabytes.',
+        ];
+    }
 }
+
+
+
