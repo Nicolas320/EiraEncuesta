@@ -23,7 +23,7 @@ class FormularioController extends Controller
         if (is_numeric($resultadoRegistro->id)) {
             $registro_id = $resultadoRegistro->id;
 
-            $atencion = array(
+            $atencion = [
                 'trato_personal' => $request->input("trato_personal"),
                 'tiempo_espera' => $request->input("tiempo_espera"),
                 'privacidad_info' => $request->input("privacidad_info"),
@@ -32,31 +32,28 @@ class FormularioController extends Controller
                 'recomendacion' => $request->input("recomendacion"),
                 'comentarios' => $request->input("comentarios"),
                 'registro_id' => $registro_id
-            );
+            ];
 
             $resultadoAtencion = Atencion::create($atencion);
 
             if ($request->hasFile('firma')) {
-                // dd($request->hasFile('firma'));
                 $directory = 'public/firmas';
-                $extension = 'png';
-                $nombre = 'firma_' . $identificacion. '.' . $extension;
-                // dd($nombre);
+                $extension = $request->file('firma')->getClientOriginalExtension();
+                $nombre = 'firma_' . $identificacion . '.' . $extension;
                 $url = $request->file('firma')->storePubliclyAs($directory, $nombre, 'local');
-                // $url = $request->file('firma')->storePublicly($directory);
-                // dd($url);
-            }
 
-            // $firma_digital = array(
-            //     'firma_digital' => $request->input("firma_digital"),
-            //     'firma'=> isset($carpeta) ? $carpeta . '/' . $nombreFirma : null, // Ruta completa de la firma
-            //     'registro_id' => $registro_id
-            // );
+                Firma::create(['firma' => $url, 'registro_id' => $registro_id]);
 
-            // $resultadoFirmaDigital = Firma::create($firma_digital);
+                $atencion['firma'] = $url;
 
-            if (is_numeric($resultadoAtencion->id)) {
-                return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
+
+                // FIRMA DIGITAL
+
+
+
+                if (is_numeric($resultadoAtencion->id)) {
+                    return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
+                }
             }
         }
     }

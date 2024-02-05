@@ -344,25 +344,32 @@
     <br>
     <br>
 
-    {{--
-        <label class="tipofirma" for="tipoFirma">Selecciona tipo de firma: <span>*</span></label>
-    <select class="firmastype" id="tipoFirma" onchange="mostrarCampo()">
-        <option value="">Seleccione</option>
-        <option value="firmaDigital">Firma Digital</option>
-        <option value="adjuntarFirma">No Firma</option>
-
-    </select> --}}
-
-
+    {{-- ADJUNTAR FIRMA --}}
     <div>
-        <input type="file" label="firma" name="firma"/>
+        <input class="adjuntarfir" type="file" label="firma" name="firma"/>
+        <p>Nota: Al no adjuntar firma, cargara un tipo de campo que sea valido para la validacion del usuarios.
+            Ejemplo: Cedula de Ciudadania, Comprobante </p>
         @error('firma')
             <small class="text danger">*{{$message}}</small>
         @enderror
     </div>
 
+
+    {{-- ADJUNTAR FIRMA DIGITAL --}}
+
+
+
+
+
+
+
+
+
+
+
     <br>
     <br>
+
         <div>
             <button class="enviar" type="submit">Enviar</button>
         </div>
@@ -373,7 +380,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
-    {{-- <script src="js/firma.js"></script> --}}
+    <script src="js/firma.js"></script>
 
 </body>
 </html>

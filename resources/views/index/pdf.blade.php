@@ -84,7 +84,7 @@
         <div class="comentario">
             <br>
             <br>
-            <textarea class="comentariosrst" name="comentarios" id="comentarios">{{ isset($atencionIndividual) ? $atencionIndividual->comentarios : '' }}</textarea>
+            <textarea class="comentariosrst" name="comentarios" id="comentarios" readonly>{{ isset($atencionIndividual) ? $atencionIndividual->comentarios : '' }}</textarea>
         </div>
         <br>
         <br>
@@ -96,7 +96,6 @@
 
 
     </form>
-
 
     <form class="hola" action="{{ route('formulario.buscarPorId') }}" method="post">
         @csrf
