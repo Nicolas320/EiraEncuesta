@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
     <link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
     <title>ENCUESTA DE SATISFACCION EIRA SALUD IPS</title>
@@ -12,7 +13,7 @@
 <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
 
 
-<form action="{{ route('registro.completado') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('guardar.registro') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <h1 class="title">ENCUESTA DE SATISFACCION</h1>
@@ -343,8 +344,9 @@
     <br>
     <br>
 
-    {{-- ADJUNTAR FIRMA --}}
-    {{-- <div>
+    {{-- FIRMA ADJUNTAR --}}
+
+  {{-- <div>
         <input class="adjuntarfir" type="file" label="firma" name="firma"/>
         <p>Nota: Al no adjuntar firma, cargara un tipo de campo que sea valido para la validacion del usuarios.
             Ejemplo: Cedula de Ciudadania, Comprobante </p>
@@ -355,8 +357,6 @@
 
 
     {{-- ADJUNTAR FIRMA DIGITAL --}}
-
-
 
     <div id="firmaDigitalContainer">
         <canvas id="canvas" name="firma" width="500" height="200"></canvas>
@@ -384,3 +384,5 @@
 
 </body>
 </html>
+
+

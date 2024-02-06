@@ -20,7 +20,7 @@
 
     <h1>Gracias!</h1>
         <p for="">Sus datos han sido recibidos</p>
-        <a class="pdf" href="{{('pdf')}}">Descargar PDF</a>
+        <a class="pdf" href="{{('index.pdf')}}">Descargar PDF</a>
         </div>
 
     <div class="search">

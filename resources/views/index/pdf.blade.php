@@ -7,47 +7,106 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('css/resultados.css') }}">
 
+    <style>
+        body {
+            text-align: center;
+        }
+
+        #formulario {
+            max-width: 700px; /* Ajusta según sea necesario */
+            margin: 0   auto;
+        }
+
+        .img-eira {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%; /* Ajusta según sea necesario */
+            height: auto;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #000;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+            width: 40%;
+        }
+
+        .califitext {
+            margin-top: 20px;
+        }
+
+        .rstatencion {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .comentarios {
+            margin-top: 20px;
+        }
+
+        .comentariosrst {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+        }
+
+        .firma {
+            margin-top: 20px;
+        }
+    </style>
+
     <title>PDF ENCUESTA</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
-
-
+    <link rel="shortcut icon" href="/IMG/logo.png" type="image/x-icon">
 </head>
 
 <body>
-
     <form id="formulario">
-        <a  href="{{ url('/') }}">
+        {{-- <a href="{{ url('/') }}">
             <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
-        </a>
-
+        </a> --}}
         <h1 class="title">ENCUESTA DE SATISFACCION</h1>
 
         <table>
-
-        <tr>
-            <td>Nombres y Apellidos</td>
-            <th>{{ isset($registro) ? $registro->nombres_apellidos : '' }}</th>
-        </tr>
-        <tr>
-            <td>Dirección</td>
-            <th>{{ isset($registro) ? $registro->direccion : '' }}</th>
-        </tr>
-        <tr>
-            <td>Teléfono</td>
-            <th>{{ isset($registro) ? $registro->telefono : '' }}</th>
-        </tr>
-        <tr>
-            <td>Género</td>
-            <th>{{ isset($registro) ? $registro->genero : '' }}</th>
+            <tr>
+                <td>Nombres y Apellidos</td>
+                <th>{{ isset($registro) ? $registro->nombres_apellidos : '' }}</th>
+            </tr>
+            <tr>
+                <td>Dirección</td>
+                <th>{{ isset($registro) ? $registro->direccion : '' }}</th>
+            </tr>
+            <tr>
+                <td>Teléfono</td>
+                <th>{{ isset($registro) ? $registro->telefono : '' }}</th>
+            </tr>
+            <tr>
+                <td>Género</td>
+                <th>{{ isset($registro) ? $registro->genero : '' }}</th>
+            </tr>
         </table>
 
-
-
         <br>
-        <div class="califitext">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de satisfacción?</div>
+        <div class="califitext">Cómo califica la atención del personal que le prestó el servicio de acuerdo al grado de
+            satisfacción?</div>
         <br>
 
         <table>
@@ -76,36 +135,24 @@
         <br>
         <label class="textresultados" for="resultados_atencion">Resultados de Atencion:</label>
 
-        <textarea class="rstatencion" name="resultados_atencion" id="resultados_atencion" readonly>{{ isset($atencionIndividual) ? $atencionIndividual->resultados_atencion : '' }}</textarea>
-
+        <textarea class="rstatencion" name="resultados_atencion" id="resultados_atencion"
+            readonly>{{ isset($atencionIndividual) ? $atencionIndividual->resultados_atencion : '' }}</textarea>
 
         <div class="comentarios">Escribe aquí tus comentarios, felicitaciones, quejas o inquietudes.</div>
 
         <div class="comentario">
             <br>
             <br>
-            <textarea class="comentariosrst" name="comentarios" id="comentarios" readonly>{{ isset($atencionIndividual) ? $atencionIndividual->comentarios : '' }}</textarea>
+            <textarea class="comentariosrst" name="comentarios" id="comentarios">{{ isset($atencionIndividual) ? $atencionIndividual->comentarios : '' }}</textarea>
         </div>
         <br>
         <br>
 
-    <div class="firma">Firma</div>
-    <br>
-    <br>
-    <br>
-
-
-    </form>
-
-    <form class="hola" action="{{ route('formulario.buscarPorId') }}" method="post">
-        @csrf
-        <label for="id">ID del registro:</label>
-        <input type="text" name="id" id="id" required>
-        <button type="submit">Buscar</button>
+        <div class="firma">Firma</div>
+        <br>
         <br>
         <br>
     </form>
+</body>
 
-
-    </body>
-    </html>
+</html>

@@ -12,6 +12,7 @@ class Firma extends Model
     protected $table = 'firmas';
 
 
+
     /**
      * The attributes that are mass assignable.
      *
@@ -22,11 +23,6 @@ class Firma extends Model
         'firma',
         'registro_id'
     ];
-
-
-    
-
-
 
     protected $guarded = ['id', 'created_at', 'updated_at'];
 
