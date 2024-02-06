@@ -95,20 +95,4 @@ var radioOtro = document.querySelector('input[name="servicio_atendido"][value="O
         }
     }
 
-    // Función para limpiar la firma
-    function limpiarFirma() {
-        firmaPad.clear();
-    }
-
-    // Inicializar la librería Signature Pad
-    var canvas = document.getElementById('canvas');
-    var firmaPad = new SignaturePad(canvas);
-
-    // Asegurarse de que el formulario se envíe con la firma como imagen en base64
-    document.querySelector('form').addEventListener('submit', function (e) {
-        var hiddenInput = document.getElementById('firma_oculta');
-        hiddenInput.value = firmaPad.toDataURL();
-    });
-
-
-
+  

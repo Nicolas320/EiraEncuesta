@@ -23,9 +23,6 @@
         <a class="pdf" href="{{('pdf')}}">Descargar PDF</a>
         </div>
 
-
-
-
     <div class="search">
         <input type="text" name="query" class="form-control" placeholder="Buscar Usuario">
         <span class="input-group-btn">
@@ -74,12 +71,6 @@
     @else
         <p>No se encontraron registros.</p>
     @endif
-
-
-
-
-
-
 
 </body>
 </html>

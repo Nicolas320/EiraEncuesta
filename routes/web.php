@@ -42,7 +42,7 @@ Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registr
 
 Route::get('/buscar', [FinEncuestaController::class, 'buscar'])->name('buscar.registros');
 
-Route::get('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
+Route::post('/finEncuesta', [FinEncuestaController::class, 'fin'])->name('registro.completado');
 
 
 Route::post('/guardarEncuesta', [FormularioController::class, 'guardarEncuesta'])->name('guardar.registro');

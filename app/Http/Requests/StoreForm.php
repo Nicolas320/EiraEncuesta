@@ -41,7 +41,7 @@ class StoreForm extends FormRequest
             'resultados_atencion'       => 'required|string|max:255',
             'recomendacion'             => 'required|string|max:255',
             'comentarios'               => 'nullable|string|max:255',
-            // 'firma_digital'             => 'nullable|string',
+            'firma_digital'             => 'nullable|string',
             'firma'                     => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'otro'                      => 'nullable|string',
         ];

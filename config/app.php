@@ -187,5 +187,4 @@ return [
     'aliases' => Facade::defaultAliases()->merge([
         // Aquí deberías definir tus alias sin un subarray
     ])->toArray(),
-
 ];

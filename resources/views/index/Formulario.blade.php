@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/index.css') }}">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
     <link rel="shortcut icon" href="https://cdn.jotfor.ms/assets/img/favicons/favicon-2021-light%402x.png">
     <title>ENCUESTA DE SATISFACCION EIRA SALUD IPS</title>
 </head>
@@ -13,7 +12,7 @@
 <img class="img-eira" src="img/LogoEira.png" alt="" width="280">
 
 
-<form action="{{ route('guardar.registro') }}" method="POST" enctype="multipart/form-data">
+<form action="{{ route('registro.completado') }}" method="POST" enctype="multipart/form-data">
     @csrf
 
     <h1 class="title">ENCUESTA DE SATISFACCION</h1>
@@ -345,31 +344,29 @@
     <br>
 
     {{-- ADJUNTAR FIRMA --}}
-    <div>
+    {{-- <div>
         <input class="adjuntarfir" type="file" label="firma" name="firma"/>
         <p>Nota: Al no adjuntar firma, cargara un tipo de campo que sea valido para la validacion del usuarios.
             Ejemplo: Cedula de Ciudadania, Comprobante </p>
         @error('firma')
             <small class="text danger">*{{$message}}</small>
         @enderror
-    </div>
+    </div> --}}
 
 
     {{-- ADJUNTAR FIRMA DIGITAL --}}
 
 
 
-
-
-
-
-
-
+    <div id="firmaDigitalContainer">
+        <canvas id="canvas" name="firma" width="500" height="200"></canvas>
+        <input type="hidden" id="firma_oculta" name="firma_digital" value="">
+        <span class="limpiar" onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline none;">Limpiar</span>
+    </div>
 
 
     <br>
     <br>
-
         <div>
             <button class="enviar" type="submit">Enviar</button>
         </div>
@@ -381,6 +378,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
 
     <script src="js/firma.js"></script>
+
+
+
 
 </body>
 </html>

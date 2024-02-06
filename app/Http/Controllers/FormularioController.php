@@ -46,8 +46,19 @@ class FormularioController extends Controller
 
                 $atencion['firma'] = $url;
 
+                //FIRMA DIGITAL
 
-                // FIRMA DIGITAL
+
+
+
+
+
+
+
+
+
+
+
 
 
 
