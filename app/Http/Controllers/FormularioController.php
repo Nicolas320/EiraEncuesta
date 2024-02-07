@@ -37,34 +37,45 @@ class FormularioController extends Controller
 
             $resultadoAtencion = Atencion::create($atencion);
 
-            if ($request->hasFile('firma')) {
-                $directory = 'public/firmas';
-                $extension = $request->file('firma')->getClientOriginalExtension();
-                $nombre = 'firma_' . $identificacion. '.' . $extension;
-                $url = $request->file('firma')->storePubliclyAs($directory, $nombre, 'local');
+            $tipoFirma = $request->input('tipo_firma');
+            $firma_digital = null;
+            $firma = null;
 
-                Firma::create(['firma' => $url, 'registro_id' => $registro_id]);
+            if ($tipoFirma == 'adjuntar') {
+                if ($request->hasFile('firma')) {
+                    $directory = 'public/firmas';
+                    $extension = $request->file('firma')->getClientOriginalExtension();
+                    $nombre = 'firma_' . $identificacion . '.' . $extension;
+                    $url = $request->file('firma')->storePubliclyAs($directory, $nombre, 'local');
 
-                $atencion['firma'] = $url;}
+                    $firma = $url;
+
+                    $atencion['firma'] = $url;
+                }
+                // dd($request);
 
 
+            }else {
                 //FIRMA DIGITAL
 
-                  if ($request->has('firma_digital')) {
-                Firma::create([
-                    'registro_id' => $registro_id,
-                    'firma_digital' => $request->input('firma_digital')
-                ]);
+                if ($request->has('firma_digital')) {
 
+                    $firma_digital = $request->input('firma_digital');
 
-
+                }
             }
+
+
+            Firma::create([
+                'registro_id' => $registro_id,
+                'firma_digital' => $firma_digital,
+                'firma' => $firma
+            ]);
+
 
             if (is_numeric($resultadoAtencion->id)) {
                 return redirect()->route('registro.completado')->with('success', 'Encuesta llenada!!');
-            }
+         }
         }
     }
 }
-
-

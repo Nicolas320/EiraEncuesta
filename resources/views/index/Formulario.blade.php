@@ -344,22 +344,34 @@
     <br>
     <br>
 
+
+    {{-- SELECTOR DE FIRMAS --}}
+    <div>
+        <label class="tipofirma" for="tipoFirma">Seleccionar tipo de firma: <span>*</span></label>
+        <select class="firmastype" id="tipoFirma" name="tipo_firma" onchange="toggleCamposFirma()">
+            <option value="selecciona">Selecciona Tipo Firma</option>
+            <option value="digital">Adjuntar Firma Digital</option>
+            <option value="adjuntar">"NO" Firma Digital</option>
+        </select>
+    </div>
+
     {{-- FIRMA ADJUNTAR --}}
 
-  {{-- <div>
+    <div id="adjuntarFirmaContainer">
         <input class="adjuntarfir" type="file" label="firma" name="firma"/>
-        <p>Nota: Al no adjuntar firma, cargara un tipo de campo que sea valido para la validacion del usuarios.
-            Ejemplo: Cedula de Ciudadania, Comprobante </p>
-        @error('firma')
+        <div class="advertencia">
+            <p>Nota: Si selecciona "No firma" adjuntar evidencia de la cedula o documento,
+                donde compruebe que la persona no puede firmar</p>
+        </div>
+        @error('firma_adjunta')
             <small class="text danger">*{{$message}}</small>
         @enderror
-    </div> --}}
+    </div>
 
+    {{-- FIRMA DIGITAL --}}
 
-    {{-- ADJUNTAR FIRMA DIGITAL --}}
-
-    <div id="firmaDigitalContainer">
-        <canvas id="canvas" name="firma" width="500" height="200"></canvas>
+    <div id="firmaDigitalContainer" style="display: none;">
+        <canvas id="canvas" name="firma_digital" width="500" height="200"></canvas>
         <input type="hidden" id="firma_oculta" name="firma_digital" value="">
         <span class="limpiar" onclick="limpiarFirma()" style="cursor: pointer; color: blue; text-decoration: underline none;">Limpiar</span>
     </div>

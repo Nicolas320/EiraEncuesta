@@ -20,4 +20,25 @@ function limpiarFirma() {
 
 
 
+// //FIRMA DIGITAL + ADJUNTAR FIMA
+
+    function toggleCamposFirma() {
+        var tipoFirma = document.getElementById("tipoFirma").value;
+        var adjuntarContainer = document.getElementById("adjuntarFirmaContainer");
+        var firmaDigitalContainer = document.getElementById("firmaDigitalContainer");
+
+        if (tipoFirma === "selecciona") {
+            adjuntarContainer.style.display = "none";
+            firmaDigitalContainer.style.display = "none";
+        } else if (tipoFirma === "adjuntar") {
+            adjuntarContainer.style.display = "block";
+            firmaDigitalContainer.style.display = "none";
+        } else {
+            adjuntarContainer.style.display = "none";
+            firmaDigitalContainer.style.display = "block";
+        }
+    }
+
+    // Llamar a toggleCamposFirma al cargar la página para manejar el estado inicial del formulario
+    window.onload = toggleCamposFirma;
 

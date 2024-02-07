@@ -435,6 +435,15 @@ table {
     justify-content: center;
 }
 
+.advertencia {
+    background-color: #ffe6e6; /* Fondo rojo claro */
+    border: 1px solid #ff3333; /* Borde rojo */
+    padding: 10px; /* Espaciado interno */
+    margin: 10px 0; /* Espaciado externo */
+    color: #ff3333; /* Color del texto rojo */
+    font-style: italic; /* Texto en cursiva */
+}
+
 
 
 

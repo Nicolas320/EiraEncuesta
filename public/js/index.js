@@ -95,4 +95,3 @@ var radioOtro = document.querySelector('input[name="servicio_atendido"][value="O
         }
     }
 
-  
